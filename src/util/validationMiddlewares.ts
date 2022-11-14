@@ -18,7 +18,7 @@ const forgotpassword = [
   validator.emailFieldValidationMW("email"),
   validator.requiredFieldValidationMW("email"),
 ];
-const otp = [validator.requiredFieldValidationMW("code")];
+const verifyEmail = [validator.requiredFieldValidationMW("token")];
 const resetpassword = [
   validator.requiredFieldValidationMW("token"),
   validator.requiredFieldValidationMW("password"),
@@ -28,7 +28,7 @@ const resetpassword = [
 class validation {
   signup = [userResiter, validator.validationResultMW];
   signin = [signIn, validator.validationResultMW];
-  otp = [otp, validator.validationResultMW];
+  verifyEmail = [verifyEmail, validator.validationResultMW];
   forgotpassword = [forgotpassword, validator.validationResultMW];
   resetpassword = [resetpassword, validator.validationResultMW];
 }
